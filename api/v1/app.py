@@ -36,6 +36,9 @@ app.config['SWAGGER'] = {
 
 
 if __name__ == "__main__":
+    """
+    main app
+    """
     host = environ.get('HBNB_API_HOST')
     port = environ.get('HBNB_API_PORT')
     if not host:
