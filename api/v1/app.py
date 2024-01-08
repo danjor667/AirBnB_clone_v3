@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""Creates app instace of Flask"""
-
+"""
+Creates app instace
+of Flask
+"""
 from os import environ
 from flask import Flask, jsonify, make_response
 from flask_cors import CORS
