@@ -119,7 +119,6 @@ class TestFileStorage(unittest.TestCase):
         """Test that get returns None or an obj in the FileStorage.__objects"""
         storage = FileStorage()
         obj = storage.all()[0]
-        """trying to get a non exixting object"""
         obj1 = storage.get(City, "jfjsdkfsjdfjkdfkjaks")
         self.assertIs(obj1, None)
         obj2 = storage.get(obj.__class__.__name__, obj.id)
