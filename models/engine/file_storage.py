@@ -77,7 +77,6 @@ class FileStorage:
         """
         class_name = cls.__name__
         key = f"{class_name}.{id}"
-        print(key)
         for k, v in self.__objects.items():
             if k == key:
                 return v
