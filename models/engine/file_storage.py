@@ -75,7 +75,9 @@ class FileStorage:
         return an object of class:cls and of id:id
         or None if not found in __objects
         """
-        key = f"{cls}.{id}"
+        class_name = cls.__name__
+        key = f"{class_name}.{id}"
+        print(key)
         for k, v in self.__objects.items():
             if k == key:
                 return v
@@ -89,7 +91,7 @@ class FileStorage:
             return count
         else:
             for ele in self.__objects:
-                if ele.startswith(f"{cls}"):
+                if ele.startswith(f"{cls.__name__}"):
                     count += 1
             return count
 
